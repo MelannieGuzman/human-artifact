@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Tree of Information-Sharing Technologies</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f8f0e7;
+      color: #2f2f2f;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .instruction {
+      text-align: center;
+      background: #f7dcc8;
+      color: #6f1d2a;
+      padding: 12px 18px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #7a1526;
+      font-size: 44px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 22px;
+      color: #555;
+      margin-bottom: 45px;
+    }
+
+    .section {
+      margin-bottom: 55px;
+    }
+
+    .section-title {
+      color: #7a1526;
+      font-size: 30px;
+      margin-bottom: 20px;
+      border-left: 6px solid #c8785d;
+      padding-left: 12px;
+    }
+
+    .tree {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .branch {
+      width: 100%;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .node {
+      background: #fffaf6;
+      border: 2px solid #c8785d;
+      border-radius: 18px;
+      padding: 18px;
+      width: min(100%, 720px);
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .branch .node {
+      flex: 1;
+      min-width: 250px;
+      max-width: 330px;
+    }
+
+    .node:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      background: #fff3eb;
+    }
+
+    .node-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon {
+      font-size: 38px;
+      width: 52px;
+      text-align: center;
+    }
+
+    .node h3 {
+      margin: 0;
+      color: #7a1526;
+      font-size: 22px;
+    }
+
+    .node p {
+      margin: 8px 0 0;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    .extra {
+      display: none;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #d9b7a5;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .node.active .extra {
+      display: block;
+    }
+
+    .connector {
+      width: 4px;
+      height: 25px;
+      background: #7a1526;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .why-it-matters {
+      margin-top: 55px;
+      background: #7a1526;
+      color: white;
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .why-it-matters h2 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .why-it-matters p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .question-box {
+      margin-top: 30px;
+      background: #f6d7c3;
+      border-radius: 16px;
+      padding: 22px;
+      color: #4a2b22;
+    }
+
+    .question-box h3 {
+      margin-top: 0;
+      color: #7a1526;
+    }
+
+    .source {
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .source a {
+      color: #7a1526;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 19px;
+      }
+
+      .branch {
+        flex-direction: column;
+      }
+
+      .branch .node {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="instruction">
+      Click each technology to reveal more information.
+    </div>
+
+    <h1>Family Tree of Information-Sharing Technologies</h1>
+
+    <p class="subtitle">
+      How today’s digital communication grew from earlier tools.
+    </p>
+
+
+    <!-- ROOTS -->
+    <section class="section">
+
+      <h2 class="section-title">Roots</h2>
+
+      <div class="tree">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">✍️</div>
+            <div>
+              <h3>Writing Systems (~3200 BCE)</h3>
+              <p>Recorded ideas could travel beyond memory.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Early writing systems allowed humans to preserve information
+            instead of depending only on oral memory. This changed how
+            knowledge could move across time and generations.
+          </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">📜</div>
+            <div>
+              <h3>Paper (~105 CE)</h3>
+              <p>Information became lighter, cheaper, and easier to copy.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Paper made written communication more portable and practical.
+            Over time, it became one of the most important materials for
+            storing and distributing information.
+          </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">🖨️</div>
+            <div>
+              <h3>Movable Type & Printing Press</h3>
+              <p>Mass reproduction accelerated access to knowledge.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Movable type and later Gutenberg's printing press helped make
+            books and written information reproducible on a much larger scale.
+            Printing changed education, religion, politics, and public access
+            to knowledge.
+
+            <div class="source">
+              Source:
+              <a href="https://www.gutenberg.org/" target="_blank">
+                Project Gutenberg
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">📰</div>
+            <div>
+              <h3>Newspapers (1600s)</h3>
+              <p>Regular printed news created shared public conversations.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Newspapers made information more regular and public.
+            People could increasingly encounter the same stories,
+            political debates, and events at similar times.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BROADCAST ERA -->
+    <section class="section">
+
+      <h2 class="section-title">Broadcast Era</h2>
+
+      <div class="branch">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">⚡</div>
+            <div>
+              <h3>Telegraph (1840s)</h3>
+              <p>Messages moved faster than people.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            The telegraph separated communication speed from transportation.
+            Information could travel across long distances almost instantly
+            compared with letters carried physically.
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">☎️</div>
+            <div>
+              <h3>Telephone (1876)</h3>
+              <p>Long-distance voice communication became immediate.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            The telephone made real-time voice communication possible across
+            distance and made communication more personal and direct.
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">📻</div>
+            <div>
+              <h3>Radio</h3>
+              <p>Broadcasting reached mass audiences at once.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Radio introduced one-to-many electronic communication.
+            A single message, speech, or program could reach huge audiences.
+
+            <div class="source">
+              Source:
+              <a href="https://www.itu.int/en/history/Pages/ITUsHistory.aspx"
+                 target="_blank">
+                International Telecommunication Union
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="connector"></div>
+
+      <div class="tree">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">📺</div>
+            <div>
+              <h3>Television</h3>
+              <p>Sound and image reshaped public communication.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Television combined audio and moving images, creating a powerful
+            new way to deliver entertainment, advertising, news, and political
+            messages to mass audiences.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NETWORK ERA -->
+    <section class="section">
+
+      <h2 class="section-title">Network Era</h2>
+
+      <div class="tree">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">💻</div>
+            <div>
+              <h3>Internet</h3>
+              <p>Networks connected computers across distance.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            The internet brought previously separate communication technologies
+            together into a global digital network.
+
+            <div class="source">
+              Source:
+              <a href="https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
+                 target="_blank">
+                Internet Society
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">🌐</div>
+            <div>
+              <h3>World Wide Web (1989–1991)</h3>
+              <p>Information became linked, clickable, and easier to access.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            The World Wide Web made internet information easier for ordinary
+            users to navigate through websites and hyperlinks. It helped turn
+            the internet into a public information environment.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CURRENT MOMENT -->
+    <section class="section">
+
+      <h2 class="section-title">Current Moment</h2>
+
+      <div class="branch">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">📱</div>
+            <div>
+              <h3>Smartphone</h3>
+              <p>Communication became portable and constant.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Smartphones brought the internet, camera, telephone, messaging,
+            maps, and countless other technologies together in one portable device.
+          </div>
+        </div>
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">💬</div>
+            <div>
+              <h3>Social Media & Messaging</h3>
+              <p>Anyone can publish, share, and react in real time.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Social media transformed audiences into participants.
+            Instead of only receiving information, users can create,
+            redistribute, comment on, and reshape it.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="connector"></div>
+
+      <div class="tree">
+
+        <div class="node">
+          <div class="node-header">
+            <div class="icon">🤖</div>
+            <div>
+              <h3>AI-Assisted Communication</h3>
+              <p>Technology now helps create information as well as distribute it.</p>
+            </div>
+          </div>
+
+          <div class="extra">
+            Generative AI represents another shift in information technology.
+            Earlier tools mostly helped humans store, copy, or distribute
+            information. AI can now participate in producing text, images,
+            audio, and other content.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="why-it-matters">
+      <h2>Why this matters now</h2>
+
+      <p>
+        Each new communication technology made information faster,
+        more accessible, and more interactive. However, greater speed
+        and access also create new problems involving trust, attention,
+        misinformation, privacy, and influence.
+      </p>
+    </div>
+
+
+    <div class="question-box">
+
+      <h3>Question to think about</h3>
+
+      <p>
+        If every generation creates a technology that makes information
+        easier to produce and spread, does greater access to information
+        necessarily make society better informed?
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <script>
+    const nodes = document.querySelectorAll(".node");
+
+    nodes.forEach(function(node) {
+      node.addEventListener("click", function() {
+        node.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
